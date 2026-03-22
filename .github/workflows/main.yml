@@ -41,8 +41,8 @@ jobs:
 
       - name: Build and push Docker image
         run: |
-          docker build -t pborovyk/pasha-app:1.3 .
-          docker push pborovyk/pasha-app:1.3
+          docker build -t pborovyk/pasha-app:1.4 .
+          docker push pborovyk/pasha-app:1.4
 
       - name: Update Kubernetes manifests
         run: |

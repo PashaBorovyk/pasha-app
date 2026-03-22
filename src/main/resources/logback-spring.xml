@@ -1,0 +1,11 @@
+<configuration>
+    <appender name="OTEL" class="io.opentelemetry.instrumentation.logback.appender.v1_0.OpenTelemetryAppender">
+        <captureExperimentalAttributes>true</captureExperimentalAttributes>
+        <captureCodeAttributes>true</captureCodeAttributes>
+    </appender>
+
+    <root level="INFO">
+        <appender-ref ref="OTEL" />
+        <appender-ref ref="CONSOLE" /> <!-- щоб бачити і в консолі K8s -->
+    </root>
+</configuration>
