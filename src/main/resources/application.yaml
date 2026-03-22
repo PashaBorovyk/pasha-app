@@ -10,3 +10,18 @@ logging:
     com.pasha.app: DEBUG
   pattern:
     console: "[%d{yyyy-MM-dd HH:mm:ss.SSS}] %5p %t %logger{36} : %m%n"
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "prometheus,health,info"
+  endpoint:
+    health:
+      show-details: always
+    prometheus:
+      access:
+  prometheus:
+    metrics:
+      export:
+        enabled: true
