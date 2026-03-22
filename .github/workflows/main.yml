@@ -52,9 +52,9 @@ jobs:
           git config --global user.email "github-actions@github.com"
           
           NOW=$(date +'%Y-%m-%dT%H:%M:%S')
-          NEW_TAG="1.2"
+          #NEW_TAG="1.2"
           sed -i "s|deployed-at:.*|deployed-at: \"$NOW\"|g" ks8/deployment.yaml
-          sed -i "s|image: pborovyk/pasha-app:.*|image: pborovyk/pasha-app:$NEW_TAG|g" ks8/deployment.yaml
+          #sed -i "s|image: pborovyk/pasha-app:.*|image: pborovyk/pasha-app:$NEW_TAG|g" ks8/deployment.yaml
           git add ks8/deployment.yaml
           git commit -m "Trigger ArgoCD deployment at $NOW"
           git push
