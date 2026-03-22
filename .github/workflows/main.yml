@@ -30,7 +30,7 @@ jobs:
         with:
           repository: PashaBorovyk/pashaDemo
           #token: ${{ secrets.GITOPS_TOKEN }}
-          path: ks8
+          path: gitops-repo
 
 #      - name: Checkout GitOps repository
 #          uses: actions/checkout@v4
@@ -46,7 +46,7 @@ jobs:
 
       - name: Update Kubernetes manifests
         run: |
-          cd ks8
+          cd gitops-repo
           
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
