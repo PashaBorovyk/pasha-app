@@ -54,6 +54,6 @@ jobs:
           NOW=$(date +'%Y-%m-%dT%H:%M:%S')
           sed -i "s|deployed-at:.*|deployed-at: \"$NOW\"|g" ks8/deployment.yaml
           #sed -i "s|image: pborovyk/pasha-app:.*|image: pborovyk/pasha-app:1.1|g" ks8/deployment.yaml
-          git add k8s/deployment.yaml
+          git add ks8/deployment.yaml
           git commit -m "Trigger ArgoCD deployment at $NOW"
           git push
