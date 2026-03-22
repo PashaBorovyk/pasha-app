@@ -39,14 +39,14 @@ jobs:
 #            token: ${{ secrets.GITOPS_TOKEN }}
 #            path: gitops-repo
 
-      - name: Build and push Docker image
-        run: |
-          docker build -t pborovyk/pasha-app:1.1 .
-          docker push pborovyk/pasha-app:1.1
+#      - name: Build and push Docker image
+#        run: |
+#          docker build -t pborovyk/pasha-app:1.1 .
+#          docker push pborovyk/pasha-app:1.1
 
       - name: Update Kubernetes manifests
         run: |
-          cd pashaDemo
+          #cd pashaDemo
           
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
