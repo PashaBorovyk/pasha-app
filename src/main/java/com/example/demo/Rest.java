@@ -18,8 +18,8 @@ public class Rest {
     @ResponseStatus(value = HttpStatus.OK)
     public String getAssetStatuses() {
 
-        logger.info("Test pasha App 1.3");
-        return "Test logging 1.3";
+        logger.info("Test pasha App 1.5");
+        return "Test logging 1.5";
     }
 
 }
